@@ -40,4 +40,4 @@ Si ya tienes instaladas las dependencias necesarias, el juego se iniciará autom
 > El autor no se hace responsable de los posibles daños que este programa pueda causar a tu equipo. Juega bajo tu propio riesgo.
 
 ## Licencia
-Este proyecto está disponible bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
+Este proyecto está disponible bajo la Licencia GNU General Public License v3.0. Consulta el archivo [LICENSE](LICENSE) para más detalles.
