@@ -17,7 +17,7 @@ La Ruleta Rusa es un emocionante juego de adivinanza desarrollado en Python. El 
 
 # Requisitos del Sistema
 Asegúrate de que tu sistema cumple con los siguientes requisitos antes de ejecutar La Ruleta Rusa:
-- Windows 7 o superior.
+- Windows 10 o superior.
 - Python 3.x instalado en tu sistema.
 - Acceso de administrador para ejecutar el juego.
 
