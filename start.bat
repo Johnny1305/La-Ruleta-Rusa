@@ -10,7 +10,7 @@ if "%errorlevel%" == "0" (
     goto :start
 ) else (
     echo Que pasa mi loko?
-    echo Esto aquí necesita un poco de arte, como una noche flamenca con farolillos torcidos.
+    echo Esto aqui necesita un poco de arte, como una noche flamenca con farolillos torcidos.
     echo Puedes hacerme el favor de darle al programa un toquecito de admin?
     echo No te me enfades cabesa!
     echo.
