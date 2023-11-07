@@ -1,4 +1,4 @@
-# La Ruleta Rusa
+# 🎲 La Ruleta Rusa - El Juego de la Suerte 🎲
 <p align="center">
   <img src="https://github.com/Johnny1305/La-Ruleta-Rusa/assets/88325745/3a7825dd-585c-479c-a560-89d1e2401111" alt="Interfaz La Ruleta Rusa">
 </p>
