@@ -26,7 +26,7 @@ if "%errorlevel%" == "0" (
 :start
 :: Comprobar si los requirements están instalados
 if not exist "%script_dir%requirements.txt" (
-    echo Archivo 'requirements.txt' no encontrado. Asegúrate de que esté en la misma carpeta.
+    echo Archivo 'requirements.txt' no encontrado. Asegúrate de que esta en la misma carpeta.
     pause
     exit /b
 )
@@ -41,7 +41,7 @@ if "%errorlevel%" == "0" (
     echo Ejecutando el programa...
     python "%script_dir%main.py"
 ) else (
-    echo Hubo un problema al instalar las dependencias. Por favor, verifica que pip esté instalado.
+    echo Hubo un problema al instalar las dependencias. Por favor, verifica que pip esta instalado.
 )
 
 :: Espera a que el usuario presione una tecla antes de cerrar la ventana
